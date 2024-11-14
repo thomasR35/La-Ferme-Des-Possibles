@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La ferme des possibles</title>
     <link rel="stylesheet" href="assets/css/theme.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
   </head>
   <body>
-    <header class="header-container">
-      <img class="header-logo" src="assets/images/logo.png" alt="logo" />
-      <h1 class="header-title">La ferme des possibles</h1>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">Café</a></li>
-          <li><a href="#">Mur</a></li>
-          <li><a href="#">Contact</a></li>
+    <header class="header">
+      <img class="header__logo" src="assets/images/logo.png" alt="logo" />
+      <h1 class="header__title">La ferme des possibles</h1>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Accueil</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Café</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Mur</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main class="container-main">
-      <h2 class="container-main-title">Bienvenue sur la ferme des possibles</h2>
+    <main class="main">
+      <div class="main-banner">
+        <h2 class="main-banner__title">Bienvenue sur la ferme des possibles</h2>
+      </div>
 
-      <section class="container-main-section">
-        <h3>Qui sommes-nous ?</h3>
-        <article class="container-main-section-text">
+      <section class="main-section">
+        <h3 class="main-section__title">Qui sommes-nous ?</h3>
+        <article class="main-section__text">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
             veritatis maxime molestiae ipsam impedit unde harum saepe,
@@ -38,14 +44,14 @@
           </p>
         </article>
 
-        <div class="container-main-section-image">
+        <div class="main-section__image">
           <img src="assets/images/ferme.jpg" alt="La ferme des possibles" />
         </div>
       </section>
 
-      <section class="container-main-section">
-        <h3>Le projet</h3>
-        <article class="container-main-section-text">
+      <section class="main-section">
+        <h3 class="main-section__title">Le projet</h3>
+        <article class="main-section__text">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
             impedit ullam error porro fuga. Voluptatem sint accusantium est sunt
@@ -53,14 +59,14 @@
             Quam, veniam!
           </p>
         </article>
-        <div class="container-main-section-image">
+        <div class="main-section__image">
           <img src="assets/images/ferme.jpg" alt="La ferme des possibles" />
         </div>
       </section>
 
-      <section class="container-main-section">
-        <h3>Nos activités</h3>
-        <article class="container-main-section-text">
+      <section class="main-section">
+        <h3 class="main-section__title">Nos activités</h3>
+        <article class="main-section__text">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
             est, non sit saepe corporis eos iusto adipisci aperiam rerum
@@ -68,60 +74,17 @@
             Ratione, voluptas veritatis.
           </p>
         </article>
-        <div class="container-main-section-image">
+        <div class="main-section__image">
           <img src="assets/images/ferme.jpg" alt="La ferme des possibles" />
         </div>
       </section>
-
-      <section class="gallery-valeurs">
-        <img class="valeurs-img" src="assets/images/Local.jpg" alt="Local" />
-        <img
-          class="valeurs-img"
-          src="assets/images/Durable.jpg"
-          alt="Durable"
-        />
-        <img
-          class="valeurs-img"
-          src="assets/images/Solidaire.jpg"
-          alt="Solidaire"
-        />
-        <img
-          class="valeurs-img"
-          src="assets/images/ferme.jpg"
-          alt="Ecologique"
-        />
-        <img class="valeurs-img" src="assets/images/Social.jpg" alt="Social" />
-        <img class="valeurs-img" src="assets/images/Engagé.jpg" alt="Engagé" />
-      </section>
     </main>
 
-    <footer class="footer-container">
-      <div class="footer-contact">
-        <h3>Contact</h3>
-        <ul>
-          <li>
-            <i class="fa-brands fa-square-facebook"></i
-            ><a href="https://www.facebook.com/">Facebook</a>
-          </li>
-          <li>
-            <i class="fa-brands fa-square-twitter"></i
-            ><a href="https://x.com/?lang=en">Twitter</a>
-          </li>
-          <li>
-            <i class="fa-brands fa-square-instagram"></i
-            ><a href="https://www.instagram.com/">Instagram</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-adresse">
-        <h3>Adresse</h3>
-        <p>123 rue de la ferme</p>
-        <p>75000 Paris</p>
-      </div>
-      <div class="footer-horaires">
-        <h3>Horaires</h3>
-        <p>lundi au vendredi</p>
-        <p>9h00 - 18h00</p>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content__opening-hours"></div>
+        <div class="footer-content__adress"></div>
+        <div class="footer-content__social"></div>
       </div>
     </footer>
   </body>
