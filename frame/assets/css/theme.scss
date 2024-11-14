@@ -1,0 +1,139 @@
+/*GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5em;
+}
+/*HEADER & BURGER MENU*/
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #818181;
+  z-index: 1;
+  &__logo {
+    width: 10%;
+    height: auto;
+  }
+  &__title {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+  }
+  &__nav {
+    height: 25%;
+    width: 20%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: -20%;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: right 0.5s ease;
+  }
+  &__nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  &__nav a:hover {
+    color: #111;
+  }
+  &__nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__nav.active {
+    right: 0;
+  }
+  &__nav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+}
+.burger-icon span {
+  display: flex;
+  flex-direction: row;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+/*MAIN*/
+.main {
+  margin: auto;
+  width: 80%;
+  position: relative;
+  margin-top: 25%;
+  background-color: #e8e8e8;
+  margin-bottom: 10%;
+  &-banner__title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 3em;
+  }
+  &-section {
+    margin: 2em 0;
+    &__title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+    &__text {
+      text-align: justify;
+      margin-bottom: 1em;
+    }
+    &__image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1em;
+      max-width: 100%;
+    }
+    &__image img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+    &__image__gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    &__image__gallery img {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+    }
+  }
+}
+/*FOOTER*/
+.footer {
+  display: flex;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #818181;
+  z-index: 1;
+  &__logo {
+    width: 10%;
+    height: auto;
+  }
+  &__title {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+  }
+}
