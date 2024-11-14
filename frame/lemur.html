@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La ferme des possibles</title>
+    <link rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="assets/images/logo-ferme.png" alt="logo" />
+
+      <h1 class="header__title">La ferme des possibles</h1>
+
+      <nav id="burgerNav" class="header__nav">
+        <a id="closeBtn" href="#" class="close">×</a>
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Accueil</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Café</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Mur</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+    </header>
+
+    <main class="main">
+      <div class="main-banner">
+        <h2 class="main-banner__title">Le mur des petites annonces!</h2>
+      </div>
+
+     
+
+      <section class="main-section__announcements-submit">
+
+      <form class="announcement-form">
+          <input type="text" id="title" placeholder="Titre de l'annonce" required />
+          <textarea id="description" placeholder="Description de l'annonce" required></textarea>
+          <button type="submit">Publier</button>
+      </form>
+    </section>
+
+    <section class="announcements-wall"></section>
+
+  
+<button class="clear-button">Clear</button>
+
+     
+       
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content__opening-hours">
+          <h4>Horaires d'ouverture</h4>
+          <ul>
+            <li>lundi: 10h - 18h</li>
+            <li>mardi: 10h - 18h</li>
+            <li>mercredi: 10h - 18h</li>
+            <li>jeudi: 10h - 18h</li>
+            <li>vendredi: 10h - 18h</li>
+            <li>samedi: 10h - 18h</li>
+            <li>dimanche: 10h - 18h</li>
+          </ul>
+        </div>
+        <div class="footer-content__adress">
+          <h4>Adresse</h4>
+          <p>10 rue de la ferme, 75000 Paris</p>
+        </div>
+        <div class="footer-content__social">
+          <h4>Réseaux sociaux</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </div>
+      </div>
+    </footer>
+    <script language="javascript" src="assets/js/index.js"></script>
+    <script src="assets/js/annoucement-wall.js"></script>
+  </body>
+</html>
