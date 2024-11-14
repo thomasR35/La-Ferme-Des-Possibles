@@ -5,6 +5,20 @@
   box-sizing: border-box;
   line-height: 1.5em;
 }
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Gowun Dodum, sans-serif;
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: Pacifico, cursive;
+  font-weight: lighter;
+}
 /*HEADER & BURGER MENU*/
 .header {
   display: flex;
@@ -16,29 +30,30 @@
   background-color: #818181;
   z-index: 1;
   &__logo {
-    width: 10%;
+    width: 10rem;
     height: auto;
   }
   &__title {
     vertical-align: middle;
     display: flex;
     flex-direction: row;
+    font-size: 3rem;
   }
   &__nav {
-    height: 25%;
-    width: 20%;
+    height: 25rem;
+    width: 15rem;
     position: fixed;
     z-index: 2;
     top: 0;
-    right: -20%;
+    right: -20rem;
     background-color: #e8e8e8;
-    padding-top: 60px;
+    padding-top: 6rem;
     transition: right 0.5s ease;
   }
   &__nav a {
-    padding: 8px 8px 8px 32px;
+    padding: 0.5rem 0.5rem 0.5rem 2.4rem;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -57,17 +72,17 @@
   &__nav .close {
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
+    right: 1.5rem;
+    font-size: 3rem;
   }
 }
 .burger-icon span {
   display: flex;
   flex-direction: row;
-  width: 35px;
-  height: 5px;
+  width: 3.5rem;
+  height: 0.5rem;
   background-color: black;
-  margin: 6px 0;
+  margin: 0.6rem 0;
 }
 /*MAIN*/
 .main {
@@ -90,8 +105,14 @@
       margin-bottom: 1em;
     }
     &__text {
-      text-align: justify;
+      text-align: left;
       margin-bottom: 1em;
+    }
+    &-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 1em;
     }
     &__image {
       display: flex;
@@ -101,7 +122,7 @@
     }
     &__image img {
       width: 100%;
-      max-width: 600px;
+      max-width: 60rem;
       height: auto;
     }
     &__image__gallery {
@@ -114,7 +135,7 @@
     &__image__gallery img {
       width: 100%;
       height: auto;
-      max-width: 200px;
+      max-width: 20rem;
     }
   }
 }
@@ -123,17 +144,44 @@
   display: flex;
   bottom: 0;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   background-color: #818181;
-  z-index: 1;
-  &__logo {
-    width: 10%;
-    height: auto;
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    max-width: 100%;
+    margin: 0 auto;
+    &__opening-hours {
+      text-align: left;
+      padding: 1em;
+    }
+    &__adress {
+      text-align: center;
+      padding: 1em;
+    }
+    &__social {
+      text-align: center;
+      padding: 1em;
+      ul li {
+        display: inline;
+      }
+      i {
+        padding: 0.5em;
+      }
+    }
   }
-  &__title {
-    vertical-align: middle;
-    display: flex;
-    flex-direction: row;
+
+  &__opening-hours ul,
+  &-content ul,
+  &-content li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
+}
+h4 {
+  text-align: center;
+  padding-bottom: 2em;
 }

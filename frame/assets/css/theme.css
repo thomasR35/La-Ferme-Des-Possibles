@@ -6,6 +6,23 @@
   line-height: 1.5em;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Gowun Dodum, sans-serif;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Pacifico, cursive;
+  font-weight: lighter;
+}
+
 /*HEADER & BURGER MENU*/
 .header {
   display: flex;
@@ -18,29 +35,30 @@
   z-index: 1;
 }
 .header__logo {
-  width: 10%;
+  width: 10rem;
   height: auto;
 }
 .header__title {
   vertical-align: middle;
   display: flex;
   flex-direction: row;
+  font-size: 3rem;
 }
 .header__nav {
-  height: 25%;
-  width: 20%;
+  height: 25rem;
+  width: 15rem;
   position: fixed;
   z-index: 2;
   top: 0;
-  right: -20%;
+  right: -20rem;
   background-color: #e8e8e8;
-  padding-top: 60px;
+  padding-top: 6rem;
   transition: right 0.5s ease;
 }
 .header__nav a {
-  padding: 8px 8px 8px 32px;
+  padding: 0.5rem 0.5rem 0.5rem 2.4rem;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -59,17 +77,17 @@
 .header__nav .close {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 36px;
+  right: 1.5rem;
+  font-size: 3rem;
 }
 
 .burger-icon span {
   display: flex;
   flex-direction: row;
-  width: 35px;
-  height: 5px;
+  width: 3.5rem;
+  height: 0.5rem;
   background-color: black;
-  margin: 6px 0;
+  margin: 0.6rem 0;
 }
 
 /*MAIN*/
@@ -95,8 +113,14 @@
   margin-bottom: 1em;
 }
 .main-section__text {
-  text-align: justify;
+  text-align: left;
   margin-bottom: 1em;
+}
+.main-section-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
 }
 .main-section__image {
   display: flex;
@@ -106,7 +130,7 @@
 }
 .main-section__image img {
   width: 100%;
-  max-width: 600px;
+  max-width: 60rem;
   height: auto;
 }
 .main-section__image__gallery {
@@ -119,7 +143,7 @@
 .main-section__image__gallery img {
   width: 100%;
   height: auto;
-  max-width: 200px;
+  max-width: 20rem;
 }
 
 /*FOOTER*/
@@ -127,17 +151,42 @@
   display: flex;
   bottom: 0;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   background-color: #818181;
-  z-index: 1;
 }
-.footer__logo {
-  width: 10%;
-  height: auto;
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  max-width: 100%;
+  margin: 0 auto;
 }
-.footer__title {
-  vertical-align: middle;
-  display: flex;
-  flex-direction: row;
+.footer-content__opening-hours {
+  text-align: left;
+  padding: 1em;
+}
+.footer-content__adress {
+  text-align: center;
+  padding: 1em;
+}
+.footer-content__social {
+  text-align: center;
+  padding: 1em;
+}
+.footer-content__social ul li {
+  display: inline;
+}
+.footer-content__social i {
+  padding: 0.5em;
+}
+.footer__opening-hours ul, .footer-content ul, .footer-content li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  text-align: center;
+  padding-bottom: 2em;
 }/*# sourceMappingURL=theme.css.map */
