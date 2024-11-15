@@ -55,32 +55,79 @@
       </a>
     </header>
 
-    <main class="main">
-      <div class="main-banner">
-        <h2 class="main-banner__title">Le mur des petites annonces!</h2>
+    <div class="container">
+      <!-- Partie Formulaire -->
+      <div class="form-section">
+        <h2>Inscription à l'atelier</h2>
+        <form>
+          <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              placeholder="Entrez votre nom"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom :</label>
+            <input
+              type="text"
+              id="prenom"
+              name="prenom"
+              placeholder="Entrez votre prénom"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Entrez votre email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone :</label>
+            <input
+              type="tel"
+              id="telephone"
+              name="telephone"
+              placeholder="Entrez votre téléphone"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="atelier">Type d'atelier :</label>
+            <select id="atelier" name="atelier" required>
+              <option value="">-- Sélectionnez un atelier --</option>
+              <option value="couture">Atelier Couture</option>
+              <option value="patisserie">Atelier Pâtisserie</option>
+              <option value="maraichage">Atelier Maraîchage</option>
+              <option value="cuisine">Atelier Cuisine</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit">S'inscrire</button>
+          </div>
+        </form>
       </div>
 
-      <section class="main-section__announcements-submit">
-        <form class="announcement-form">
-          <input
-            type="text"
-            id="title"
-            placeholder="Titre de l'annonce"
-            required
-          />
-          <textarea
-            id="description"
-            placeholder="Description de l'annonce"
-            required
-          ></textarea>
-          <button type="submit">Publier</button>
-        </form>
+      <!-- Partie Contact -->
+      <section class="contact-section">
+        <h2>Nous Contacter</h2>
+        <div class="contact-item"><span>Email :</span> contact@example.com</div>
+        <div class="contact-item">
+          <span>Téléphone :</span> +33 6 00 00 00 00
+        </div>
+        <div class="contact-item">
+          <span>Adresse :</span> 123 Rue de la République, 75000 Paris, France
+        </div>
       </section>
-
-      <section class="announcements-wall"></section>
-
-      <button class="clear-button">Clear</button>
-    </main>
+    </div>
 
     <footer class="footer">
       <div class="footer-content">
@@ -121,6 +168,5 @@
       </div>
     </footer>
     <script language="javascript" src="assets/js/index.js"></script>
-    <script src="assets/js/annoucement-wall.js"></script>
   </body>
 </html>

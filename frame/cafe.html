@@ -3,29 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Gowun+Dodum&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Gowun+Dodum&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <title>La ferme des possibles</title>
     <link rel="stylesheet" href="assets/css/theme.css" />
   </head>
   <body>
     <header class="header">
-      <img class="header__logo" src="assets/images/logo.png" alt="logo" />
+      <img class="header__logo" src="assets/images/logo-ferme.png" alt="logo" />
+
       <h1 class="header__title">La ferme des possibles</h1>
-      <nav class="header__nav">
+
+      <nav id="burgerNav" class="header__nav">
+        <a id="closeBtn" href="#" class="close">×</a>
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Accueil</a>
+            <a class="header__nav-link" href="index.html">Accueil</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Café</a>
+            <a class="header__nav-link" href="cafe.html">Café</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Mur</a>
+            <a class="header__nav-link" href="lemur.html">Mur</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Contact</a>
+            <a class="header__nav-link" href="form.html">Contact</a>
           </li>
         </ul>
       </nav>
+
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
     </header>
 
     <main class="main">
@@ -57,9 +84,9 @@
         </p>
 
         <p class="main-section__text">
-          Le café est ouvert du jeudi au dimanche, et chaque vendredi soir, notre
-          restaurant vous propose une cuisine simple et authentique, préparée
-          avec les légumes fraîchement récoltés
+          Le café est ouvert du jeudi au dimanche, et chaque vendredi soir,
+          notre restaurant vous propose une cuisine simple et authentique,
+          préparée avec les légumes fraîchement récoltés
         </p>
 
         <p class="main-section__text">
@@ -85,9 +112,12 @@
                 Concert : The Paper Kites (folk)
               </h3>
               <p class="event-card__hours">Vendredi 22 novembre 2024 à 20h00</p>
-              <a href="description-folk-blues.html" class="event-card__button"
-                >En savoir plus</a
+              <button
+                href="description-folk-blues.html"
+                class="event-card__button"
               >
+                En savoir plus
+              </button>
             </div>
           </div>
 
@@ -100,9 +130,12 @@
             <div class="event-card__infos">
               <h3 class="event-card__title">Club Lecture</h3>
               <p class="event-card__hours">Mercredi 27 novembre 2024 à 18h30</p>
-              <a href="description-folk-blues.html" class="event-card__button"
-                >En savoir plus</a
+              <button
+                href="description-folk-blues.html"
+                class="event-card__button"
               >
+                En savoir plus
+              </button>
             </div>
           </div>
 
@@ -115,9 +148,12 @@
             <div class="event-card__infos">
               <h3 class="event-card__title">Open Jam</h3>
               <p class="event-card__hours">Vendredi 29 novembre 2024 à 20h00</p>
-              <a href="description-folk-blues.html" class="event-card__button"
-                >En savoir plus</a
+              <button
+                href="description-folk-blues.html"
+                class="event-card__button"
               >
+                En savoir plus
+              </button>
             </div>
           </div>
 
@@ -130,9 +166,12 @@
             <div class="event-card__infos">
               <h3 class="event-card__title">Apéro Tricot</h3>
               <p class="event-card__hours">Mercredi 4 décembre 2024 à 18h30</p>
-              <button href="description-folk-blues.html" class="event-card__button"
-                >En savoir plus</button
+              <button
+                href="description-folk-blues.html"
+                class="event-card__button"
               >
+                En savoir plus
+              </button>
             </div>
           </div>
         </div>
@@ -144,25 +183,36 @@
         <div class="footer-content__opening-hours">
           <h4>Horaires d'ouverture</h4>
           <ul>
-            <li>lundi: 10h - 18h</li>
-            <li>mardi: 10h - 18h</li>
-            <li>mercredi: 10h - 18h</li>
-            <li>jeudi: 10h - 18h</li>
-            <li>vendredi: 10h - 18h</li>
-            <li>samedi: 10h - 18h</li>
-            <li>dimanche: 10h - 18h</li>
+            <li>Lundi: 10h - 18h</li>
+            <li>Mardi: 10h - 18h</li>
+            <li>Mercredi: 10h - 18h</li>
+            <li>Jeudi: 10h - 18h</li>
+            <li>Vendredi: 10h - 18h</li>
+            <li>Samedi: 10h - 18h</li>
+            <li>Dimanche: 10h - 18h</li>
           </ul>
         </div>
         <div class="footer-content__adress">
           <h4>Adresse</h4>
-          <p>10 rue de la ferme, 75000 Paris</p>
+          <p>Gaec Cottin</p>
+          <p>22 La Bouderie, 35440 Dingé</p>
         </div>
         <div class="footer-content__social">
           <h4>Réseaux sociaux</h4>
           <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li>
+              <i class="fa-brands fa-square-facebook fa-xl"></i
+              ><a href="https://www.facebook.com/"></a>
+            </li>
+            <li>
+              <i class="fa-brands fa-square-twitter fa-xl"></i
+              ><a href="https://x.com/?lang=en"></a>
+            </li>
+            <li>
+              <i class="fa-brands fa-square-instagram fa-xl"></i
+              ><a href="https://www.instagram.com/"></a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

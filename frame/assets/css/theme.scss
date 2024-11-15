@@ -27,11 +27,35 @@
 /* *****************************************************************
 1. VARIABLES
 ***************************************************************** */
-
+$beige: #f2efe3;
+$gris-noir: #251e27;
+$turquoise: #4bad94;
+$marron: #b75829;
+$marron-beige: #ce946b;
 /* *****************************************************************
 2. RESET
 ***************************************************************** */
+ol,
+ul {
+  list-style-type: none;
+}
 
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  all: unset;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
 /* *****************************************************************
 3. GENERAL
 ***************************************************************** */
@@ -49,6 +73,7 @@ html {
 body {
   font-family: Gowun Dodum, sans-serif;
   font-size: 1.6rem;
+  color: $gris-noir;
 }
 
 h1,
@@ -58,7 +83,16 @@ h4 {
   font-family: Pacifico, cursive;
   font-weight: lighter;
 }
+button {
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  transition: all 0.3s ease;
+}
 
+button:hover {
+  opacity: 80%;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
 /* *****************************************************************
 4. MAIN LAYOUT ( pour le commun à toutes les pages?)
 ***************************************************************** */
@@ -74,7 +108,7 @@ h4 {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  background-color: #818181;
+  background-color: $turquoise;
   z-index: 1;
   &__logo {
     width: 10rem;
@@ -84,7 +118,7 @@ h4 {
     vertical-align: middle;
     display: flex;
     flex-direction: row;
-    font-size: 3rem;
+    font-size: 5rem;
   }
   &__nav {
     height: 25rem;
@@ -93,7 +127,7 @@ h4 {
     z-index: 2;
     top: 0;
     right: -20rem;
-    background-color: #e8e8e8;
+    background-color: $beige;
     padding-top: 6rem;
     transition: right 0.5s ease;
   }
@@ -101,7 +135,7 @@ h4 {
     padding: 0.5rem 0.5rem 0.5rem 2.4rem;
     text-decoration: none;
     font-size: 2.5rem;
-    color: #818181;
+    color: $gris-noir;
     display: block;
     transition: 0.3s;
   }
@@ -128,8 +162,86 @@ h4 {
   flex-direction: row;
   width: 3.5rem;
   height: 0.5rem;
-  background-color: black;
+  background-color: $beige;
   margin: 0.6rem 0;
+}
+// Style du conteneur général
+.container {
+  margin-top: 20px;
+  gap: 2rem;
+}
+h2 {
+  margin-top: 3rem;
+}
+
+// Sections de formulaire et de contact
+.form-section,
+.contact-section {
+  flex: 1;
+  background-color: $beige;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-section {
+  margin: 20px;
+}
+
+// Style pour le formulaire
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  input,
+  select {
+    padding: 0.75rem;
+    border: 1px solid $gris-noir;
+    border-radius: 5px;
+    font-family: inherit;
+  }
+  input::placeholder {
+    color: rgba($gris-noir, 0.6);
+  }
+}
+
+button {
+  background-color: $turquoise;
+  color: $beige;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  &:hover {
+    background-color: darken($turquoise, 10%);
+  }
+}
+
+// Style pour la section contact
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 20px;
+  .contact-item {
+    background-color: $beige;
+    color: $gris-noir;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+  }
 }
 /*MAIN*/
 .main {
@@ -137,7 +249,7 @@ h4 {
   width: 80%;
   position: relative;
   margin-top: 25%;
-  background-color: #e8e8e8;
+  background-color: $beige;
   margin-bottom: 10%;
   &-banner__title {
     text-align: center;
@@ -145,6 +257,9 @@ h4 {
     margin-bottom: 3em;
   }
   &-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 2em 0;
     &__title {
       text-align: center;
@@ -193,7 +308,7 @@ h4 {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  background-color: #818181;
+  background-color: $turquoise;
 }
 .footer-content {
   display: grid;
@@ -267,18 +382,18 @@ h4 {
   .event-card {
     flex: 1 1 48%;
   }
-}
 
-/*____________________Version Desktop___________________________ */
+  /*____________________Version Desktop___________________________ */
 
-@media screen and (min-width: 1025px) {
-  /*Page café */
-  .events-container {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+  @media screen and (min-width: 1025px) {
+    /*Page café */
+    .events-container {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
 
-  .event-card {
-    flex: 1 1 25%;
+    .event-card {
+      flex: 1 1 25%;
+    }
   }
 }
