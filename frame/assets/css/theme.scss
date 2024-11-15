@@ -181,24 +181,18 @@
     gap: 1em;
     max-width: 100%;
     margin: 0 auto;
-    &__opening-hours {
-      text-align: left;
-      padding: 1em;
-    }
-    &__adress {
-      text-align: center;
-      padding: 1em;
-    }
-    &__social {
-      text-align: center;
-      padding: 1em;
-      ul li {
-        display: inline;
-      }
-      i {
-        padding: 0.5em;
-      }
-    }
+  }
+  &__title {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+  }
+  &__opening-hours ul,
+  &-content ul,
+  &-content li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }
 /* *****************************************************************
