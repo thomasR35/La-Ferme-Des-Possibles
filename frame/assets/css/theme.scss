@@ -30,6 +30,7 @@ button {
   background: none;
   padding: 0;
   cursor: pointer;
+  text-align: center;
 }
 /* *****************************************************************
 3. GENERAL
@@ -58,6 +59,12 @@ h4 {
   font-family: Pacifico, cursive;
   font-weight: lighter;
 }
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
 button {
   padding: 0.5em 1em;
   border-radius: 0.3em;
@@ -78,22 +85,23 @@ button:hover {
 /*HEADER & BURGER MENU*/
 .header {
   display: flex;
-  position: fixed;
   top: 0;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
+  padding: 2em;
   background-color: $turquoise;
   z-index: 1;
   &__logo {
-    width: 10rem;
+    width: 5rem;
     height: auto;
   }
   &__title {
-    vertical-align: middle;
     display: flex;
     flex-direction: row;
-    font-size: 5rem;
+    font-size: 2.5rem;
+    text-align: center;
   }
   &__nav {
     height: 30rem;
@@ -145,13 +153,11 @@ button:hover {
   margin: auto;
   width: 80%;
   position: relative;
-  margin-top: 25%;
   background-color: $beige;
   margin-bottom: 10%;
   &-banner__title {
     text-align: center;
-    font-size: 3em;
-    margin-bottom: 3em;
+    font-size: 2.5rem;
   }
   &-section {
     display: flex;
@@ -160,7 +166,7 @@ button:hover {
     margin: 2em 0;
     &__title {
       text-align: center;
-      font-size: 2em;
+      font-size: 2rem;
       margin-bottom: 1em;
     }
     &__text {
@@ -178,25 +184,20 @@ button:hover {
       display: flex;
       justify-content: center;
       margin-bottom: 1em;
-      max-width: 100%;
       border: solid 1px $gris-noir;
     }
     &__image img {
-      width: 100%;
-      max-width: 60rem;
       height: auto;
     }
     &__image__gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1em;
-      max-width: 100%;
       margin: 0 auto;
     }
     &__image__gallery img {
       width: 100%;
-      height: auto;
-      max-width: 20rem;
+      height: 100%;
     }
   }
 }
@@ -213,7 +214,6 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
-  max-width: 100%;
   margin: 0 auto;
 }
 .footer-content__opening-hours {
@@ -249,8 +249,10 @@ h4 {
 /* *****************************************************************
 6. ACTIVITES/Pôles PAGE
 ***************************************************************** */
+.main {
+  margin-top: 2em;
+}
 .main-banner__image {
-  max-width: 100%;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -258,13 +260,6 @@ h4 {
   justify-content: center;
   align-items: center;
 }
-
-p {
-  text-align: justify;
-  margin: 5rem;
-  color: #251e27;
-}
-
 /* Effet sur l'image du texte au survol */
 .main-section__image {
   position: relative;
@@ -278,7 +273,14 @@ p {
   transition: 0.3s ease-in-out;
   border: 1px solid #251e27;
 }
-
+.contact-link {
+  color: #4bad94;
+  font-weight: bold;
+}
+.contact-link-p {
+  margin-top: 1em;
+  text-align: center;
+}
 /*
 .main-section__image:hover img {
   filter: grayscale(100%);
@@ -295,7 +297,7 @@ p {
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 1.5rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
   text-align: center;
   max-width: calc(100% - 20px);
   box-sizing: border-box;
@@ -365,6 +367,11 @@ p {
 /* *****************************************************************
 8. 'LE MUR' PAGE
 ***************************************************************** */
+.main-banner__text {
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+}
 .announcement-form {
   display: flex;
   flex-direction: column;
@@ -442,6 +449,7 @@ h5 {
 }
 h2 {
   margin-top: 3rem;
+  text-align: center;
 }
 
 // Sections de formulaire et de contact
@@ -461,12 +469,13 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+  width: 60%;
+  margin: auto;
   gap: 1.5rem;
 }
 
 .form-group {
   display: flex;
-
   flex-direction: column;
   label {
     margin-bottom: 0.5rem;
@@ -489,6 +498,7 @@ button {
   color: $beige;
   padding: 0.75rem;
   border: none;
+  text-align: center;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -525,14 +535,21 @@ button {
     flex-wrap: wrap;
     gap: 1em;
   }
-
   .event-card {
     flex: 1 1 48%;
   }
-
   .announcements-wall {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .header__title {
+    font-size: 5rem;
+  }
+  .main h2 {
+    font-size: 4rem;
+  }
+  .main h3 {
+    font-size: 3rem;
   }
 }
 
@@ -559,5 +576,14 @@ button {
   .announcements-wall {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .header__title {
+    font-size: 5rem;
+  }
+  .main h2 {
+    font-size: 4rem;
+  }
+  .main h3 {
+    font-size: 3rem;
   }
 }

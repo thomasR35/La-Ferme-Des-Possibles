@@ -61,22 +61,38 @@
     <main class="main">
       <div class="main-banner">
         <h2 class="main-banner__title">Le mur des petites annonces!</h2>
+        <p class="main-banner__text">
+          Ici, vous pouvez publier vos annonces de troc, proposer un coup de
+          main à donner, ou échanger des services.
+        </p>
+        <p class="main-banner__text">
+          Que vous ayez une compétence à partager ou que vous cherchiez de
+          l’aide, cet espace est là pour faciliter les échanges et renforcer le
+          lien social sur notre territoire
+        </p>
       </div>
 
       <section class="main-section__announcements-submit">
         <form class="announcement-form">
+          <label for="title">Titre de l'annonce</label>
           <input
             type="text"
             id="title"
             placeholder="Titre de l'annonce"
             required
           />
+
+          <label for="description">Description de l'annonce</label>
           <textarea
+            class="annoucement-form__textaera"
             id="description"
             placeholder="Description de l'annonce"
             required
           ></textarea>
-          <button type="submit">Publier</button>
+
+          <button class="annoucement-form__button" type="submit">
+            Publier
+          </button>
         </form>
       </section>
 
