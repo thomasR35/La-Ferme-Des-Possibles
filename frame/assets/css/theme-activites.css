@@ -1,0 +1,60 @@
+.main-banner__image {
+    max-width: 100%;
+    width: 100%; 
+    height: auto;
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+p {
+    text-align: justify;
+    margin: 5rem;
+    color: #251E27;
+}
+
+/* Effet sur l'image du texte au survol */
+.main-section__image {
+    position: relative;
+    overflow: hidden; 
+}
+
+.main-section__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    border: 1px solid #251E27;
+}
+
+/*
+.main-section__image:hover img {
+    filter: grayscale(100%);
+}
+*/
+
+.main-section__image .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F2EFE3;
+    background-color: #4BAD94;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    max-width: calc(100% - 20px); 
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.main-section__image:hover .hover-text {
+    opacity: 1;
+}
