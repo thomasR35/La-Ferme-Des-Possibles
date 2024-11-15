@@ -1,25 +1,4 @@
 @charset "UTF-8";
-.events-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
-.event-card {
-  border: 2px solid black;
-  padding: 1em;
-}
-.event-card__title, .event-card__hours, .event-card__button {
-  text-align: center;
-}
-.event-card__image {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 4px;
-}
-
 /* *****************************************************************
 1. VARIABLES
 ***************************************************************** */
@@ -116,7 +95,7 @@ button:hover {
   font-size: 5rem;
 }
 .header__nav {
-  height: 25rem;
+  height: 30rem;
   width: 15rem;
   position: fixed;
   z-index: 2;
@@ -161,6 +140,310 @@ button:hover {
   margin: 0.6rem 0;
 }
 
+/*MAIN*/
+.main {
+  margin: auto;
+  width: 80%;
+  position: relative;
+  margin-top: 25%;
+  background-color: #f2efe3;
+  margin-bottom: 10%;
+}
+.main-banner__title {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 3em;
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+}
+.main-section__title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.main-section__text {
+  text-align: left;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+.main-section-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+}
+.main-section__image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  max-width: 100%;
+  border: solid 1px #251e27;
+}
+.main-section__image img {
+  width: 100%;
+  max-width: 60rem;
+  height: auto;
+}
+.main-section__image__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.main-section__image__gallery img {
+  width: 100%;
+  height: auto;
+  max-width: 20rem;
+}
+
+/*FOOTER*/
+.footer {
+  display: flex;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: #4bad94;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.footer-content__opening-hours {
+  text-align: left;
+  padding: 1em;
+}
+
+.footer-content__adress {
+  text-align: center;
+  padding: 1em;
+}
+
+.footer-content__social {
+  text-align: center;
+  padding: 1em;
+}
+
+.footer-content__social ul li {
+  display: inline;
+}
+
+.footer-content__social i {
+  padding: 0.5em;
+}
+
+.footer__opening-hours ul,
+.footer-content ul,
+.footer-content li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+/* *****************************************************************
+6. ACTIVITES/Pôles PAGE
+***************************************************************** */
+.main-banner__image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: justify;
+  margin: 5rem;
+  color: #251e27;
+}
+
+/* Effet sur l'image du texte au survol */
+.main-section__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-section__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #251e27;
+}
+
+/*
+.main-section__image:hover img {
+  filter: grayscale(100%);
+}
+*/
+.main-section__image .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2efe3;
+  background-color: #4bad94;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  max-width: calc(100% - 20px);
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.main-section__image:hover .hover-text {
+  opacity: 1;
+}
+
+/* *****************************************************************
+7. CAFE PAGE
+***************************************************************** */
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.event-card {
+  border: 2px solid black;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.event-card__title, .event-card__hours, .event-card__button {
+  text-align: center;
+}
+.event-card__title {
+  font-family: inherit;
+  font-weight: bold;
+}
+.event-card__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.event-card__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.event-card__button {
+  background-color: #4bad94;
+  color: #f2efe3;
+}
+
+.event-card__button:hover {
+  background-color: #3c8976;
+}
+
+/* *****************************************************************
+8. 'LE MUR' PAGE
+***************************************************************** */
+.announcement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 4em;
+}
+
+.announcement-form input {
+  padding: 0.75em;
+}
+
+.announcement {
+  background-color: #fffb87;
+  padding: 1em;
+  width: 200px;
+  height: auto;
+  border: 1px solid #e6e156;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  font-family: Arial, sans-serif;
+}
+
+.announcement::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.announcement::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.announcements-wall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.annoucement-form__textaera {
+  height: 10em;
+  padding: 0.75rem;
+}
+
+.annoucement-form__button {
+  background-color: #4bad94;
+}
+
+h5 {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+}
+
+/* *****************************************************************
+9. CONTACT PAGE
+***************************************************************** */
 .container {
   margin-top: 20px;
   gap: 2rem;
@@ -240,137 +523,11 @@ button:hover {
   flex: 1;
 }
 
-/*MAIN*/
-.main {
-  margin: auto;
-  width: 80%;
-  position: relative;
-  margin-top: 25%;
-  background-color: #f2efe3;
-  margin-bottom: 10%;
-}
-.main-banner__title {
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 3em;
-}
-.main-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2em 0;
-}
-.main-section__title {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-.main-section__text {
-  text-align: left;
-  margin-bottom: 1em;
-}
-.main-section-gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 1em;
-}
-.main-section__image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1em;
-  max-width: 100%;
-}
-.main-section__image img {
-  width: 100%;
-  max-width: 60rem;
-  height: auto;
-}
-.main-section__image__gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-  max-width: 100%;
-  margin: 0 auto;
-}
-.main-section__image__gallery img {
-  width: 100%;
-  height: auto;
-  max-width: 20rem;
-}
-
-/*FOOTER*/
-.footer {
-  display: flex;
-  bottom: 0;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100%;
-  background-color: #4bad94;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.footer-content__opening-hours {
-  text-align: left;
-  padding: 1em;
-}
-
-.footer-content__adress {
-  text-align: center;
-  padding: 1em;
-}
-
-.footer-content__social {
-  text-align: center;
-  padding: 1em;
-}
-
-.footer-content__social ul li {
-  display: inline;
-}
-
-.footer-content__social i {
-  padding: 0.5em;
-}
-
-.footer__opening-hours ul,
-.footer-content ul,
-.footer-content li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h4 {
-  text-align: center;
-  padding-bottom: 2em;
-}
-
-/* *****************************************************************
-6. ACTIVITES/Pôles PAGE
-***************************************************************** */
-/* *****************************************************************
-7. CAFE PAGE
-***************************************************************** */
-/* *****************************************************************
-8. 'LE MUR' PAGE
-***************************************************************** */
-/* *****************************************************************
-9. CONTACT PAGE
-***************************************************************** */
 /* *****************************************************************
 10. MEDIA QUERIES
 ***************************************************************** */
 /*____________________Version tablette___________________________ */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /*Page café */
   .events-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -379,15 +536,28 @@ h4 {
   .event-card {
     flex: 1 1 48%;
   }
-  /*____________________Version Desktop___________________________ */
+  .announcements-wall {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) and (min-width: 1025px) {
+/*____________________Version Desktop___________________________ */
+@media screen and (min-width: 1025px) {
   /*Page café */
+  .main-section__images-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
   .events-container {
     flex-direction: row;
     flex-wrap: nowrap;
   }
   .event-card {
     flex: 1 1 25%;
+  }
+  .announcements-wall {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=theme.css.map */
